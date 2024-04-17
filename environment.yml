@@ -1,0 +1,11 @@
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - numpy
+  - pandas
+  - python >=3.7,<4.0
+  - matplotlib
+  - tensorflow[and-cuda]
+  - keras
