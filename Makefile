@@ -1,7 +1,8 @@
 SHELL=/bin/bash
 
-# Installs miniconda (in ~/miniconda3/ foder). Only call this once.
+# Installs miniconda (in ~/miniconda3/ folder). Only call this once.
 conda_install:
+	-rm -r ~/miniconda3/
 	mkdir -p ~/miniconda3
 	wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 	bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
