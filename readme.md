@@ -18,7 +18,7 @@ It tested this on my machine in Windows Subsystem Linux (WSL, Ubuntu). It also w
 
 2. Terminal, cd to repo.
 
-3. (Just call this once) In the terminal, call ```make conda_install``` (see [Makefile](Makefile)) to install Miniconda. 
+3. (Just call this once for a machine) In the terminal, call ```make conda_install``` (see [Makefile](Makefile)) to install Miniconda. 
 
 3. In the terminal, call ```make conda_fresh_env``` (see [Makefile](Makefile)) to create a fresh environment for this repo, relative to its root. The dependencies are stored in the [environment.yml](environment.yml). If you change dependencies, call again.
 
