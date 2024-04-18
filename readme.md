@@ -12,7 +12,7 @@ It tested this on my machine in Windows Subsystem Linux (WSL, Ubuntu). It also w
 
 2. After this procedure, you have a fresh environment relative to your repository root in *repo_folder/conda_env*. This environment can be messed up. You do not need to upload it to GitHub. It is derived from your *environment.yml* file. The python command that you can use in *repo_folder/conda_env/bin/python*.
 
-# Steps to run program.py.
+# Steps
 
 1. Clone the repo on the (remote) machine after ssh-keygen stuff.
 
@@ -24,7 +24,7 @@ It tested this on my machine in Windows Subsystem Linux (WSL, Ubuntu). It also w
 
 4. In the terminal, call ```make run_program``` (see [Makefile](Makefile)) to run the program. This will use the fresh environment and hopefully tell you that you use GPUs.
 
-# Register the environment in VS Code.
+# VS Code.
 
 1. Open VS Code on the repo.
 
