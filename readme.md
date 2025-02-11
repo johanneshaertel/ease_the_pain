@@ -1,33 +1,29 @@
-# Intro
+# Prerequisites
 
-What follows shows how I use a combination of: 
+- Python installation is required. Tested with Python 3.11.6.
+- Visual Studio Code (optional).
 
-- Miniconda
-- TensorFlow and
-- Visual Studio Code.
+# Introduction
 
-It tested this on my machine in Windows Subsystem Linux (WSL, Ubuntu). It also works on AWS with AMI: Deep Learning Base OSS Nvidia Driver GPU AMI (Ubuntu 20.04). I assume you need to assure that NVIDIA drivers are installed (I do this by nvidia-smi). Maybe some insights on this will follow.
+If you're frustrated with recurring Python dependency issues, follow this convention for setting up a Python environment for the repo (example: "Cuda with TensorFlow").
 
-1. After this procedure, you have miniconda in folder  *~/miniconda3/* installed. Conda will be registered in the bash after reopening the terminal. If there is a previous miniconda version on the location, it will be removed. This re-install is necessary if you installed trash in the base environment, which messes up things in every derived environment. Better do the re-install (Step 3) once.
+This was tested on Windows Subsystem for Linux (WSL, Ubuntu). Ensure NVIDIA drivers are installed (verify with `nvidia-smi`).
 
-2. After this procedure, you have a fresh environment relative to your repository root in *repo_folder/conda_env*. This environment can be messed up. You do not need to upload it to GitHub. It is derived from your *environment.yml* file. The python command that you can use in *repo_folder/conda_env/bin/python*.
+After following these steps, you'll have a fresh environment in *repo_folder/.venv*. This environment can be modified freely and is included in `.gitignore`. VS Code should detect it automatically, or follow the instructions below.
 
-# Steps to run program.py.
+# Steps
 
-1. Clone the repo on the (remote) machine after ssh-keygen stuff.
+1. Download and extract the zip file into your repo, or clone the repository.
 
-2. Terminal, cd to repo.
+2. In the terminal, navigate to the repo directory.
 
-3. (Just call this once) In the terminal, call ```make conda_install``` (see [Makefile](Makefile)) to install Miniconda. 
+3. Run `make venv`.
 
-3. In the terminal, call ```make conda_fresh_env``` (see [Makefile](Makefile)) to create a fresh environment for this repo, relative to its root. The dependencies are stored in the [environment.yml](environment.yml). If you change dependencies, call again.
+4. Open VS Code in the repo directory (run `code .`).
 
-4. In the terminal, call ```make run_program``` (see [Makefile](Makefile)) to run the program. This will use the fresh environment and hopefully tell you that you use GPUs.
+5. In the top bar of VS Code, enter `> Python: Select Interpreter` and select the `.venv`.
 
-# Register the environment in VS Code.
+6. That's it.
 
-1. Open VS Code on the repo.
-
-2. In the top bar of VS Code (that can also be used for search), enter ```> Python: Select Interpreter``` and select
-the ./conda_env/bin/python.
+7. Rerun `make venv` if you change `requirements.txt`.
 

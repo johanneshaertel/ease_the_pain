@@ -1,0 +1,10 @@
+tensorflow[and-cuda]
+tf-keras
+matplotlib
+scipy
+numpy
+pandas
+requests
+scikit-learn
+pydot
+transformers
